@@ -1,13 +1,286 @@
-body {
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+}
+:root {
+  --blue: #3b82f6;
+  --grey: #d1d5db;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.hero {
+  background-image: url("./Crypto\ images/hero-bg.png");
+  padding: 30px;
+  /* position: relative; */
+}
+
+/* Style the header links */
+.header a {
+  float: left;
+  color: white;
+  text-align: center;
+  margin: 0 12px;
+  text-decoration: none;
+  font-size: 18px;
+  /* line-height: 25px; */
+  /* border-radius: 4px; */
+}
+
+/* Style the logo link (notice that we set the same value of line-height and font-size to prevent the header to increase when the font gets bigger */
+.header a.logo {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+/* Change the background color on mouse-over */
+.header a:hover {
+  border-bottom: 2px solid var(--blue);
+}
+
+/* Style the active/current link*/
+.header a.active {
+  background-color: var(--blue);
+  color: white;
+}
+
+button {
+  background-color: var(--blue);
+  padding: 10px 20px;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  font-size: 18px;
+  text-align: center;
+  margin-top: -12px;
+}
+
+.login {
+  margin: 0 10px;
+}
+
+/* Float the link section to the right */
+.header-right {
+  float: right;
+}
+
+.section1 {
+  display: flex;
+  align-items: center;
+}
+
+h1 {
+  color: white;
+}
+p {
+  color: var(--grey);
+}
+
+.deal {
+  position: relative;
+  width: 60%;
+  display: flex;
+  justify-content: space-between;
+  padding: 7px 2px;
+  background-color: #4b5563;
+  border-radius: 15px;
+}
+
+.sec-con {
+  min-height: 15em;
+  padding: 12px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.btn-blue {
+  cursor: pointer;
+  position: relative;
+  color: white;
+  width: 25%;
+  padding: 11px;
+  border-radius: 20px;
+  margin-top: 20px;
+  background-color: var(--blue);
+}
+
+.play-circle {
+  position: absolute;
+  top: 4px;
+  right: 14px;
+  background-color: white;
+  padding: 10px;
+  border-radius: 100%;
+}
+
+.section1 h1 {
+  width: 80%;
+  font-size: 48px;
+}
+
+span {
+  position: absolute;
+  top: 3px;
+  background-color: white;
+  padding: 4px 14px;
+  border-radius: 15px;
+}
+
+.deal p {
+  margin-left: 7em;
+}
+
+.stats {
+  margin: 6em 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.stat-item {
+  position: relative;
+  display: flex;
+}
+
+.stat-circle {
+  position: absolute;
+  top: 4px;
+  left: 5px;
+  background-color: #4b5563;
+  padding: 10px;
+  border-radius: 100%;
+}
+
+.text-con {
+  margin-left: 5em;
+}
+
+h2 {
+  color: white;
+}
+
+.why-us {
+  display: flex;
+  align-items: center;
+}
+
+.why-con {
+  height: 15em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.why-con h2 {
+  font-size: 3em;
+}
+
+.why-con button {
+  margin-top: 1em;
+  width: 30%;
+}
+
+.cal {
+  /* position: absolute; */
+  margin: 3em 0;
+  display: flex;
+  justify-content: center;
+}
+
+.calculator {
+  border-radius: 15px;
+  line-height: 3.7em;
+  padding: 3em;
+  background-color: white;
+  width: 80%;
+  position: absolute;
+  top: -12em;
+}
+.trade {
+  position: relative;
+  background-color: #f8f9fa;
+  padding: 8em 2em 2em 3em;
+}
+
+.trade h2 {
+  text-align: center;
+  color: black;
+}
+
+.crypto-cards {
+  padding: 4em;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  background-color: #f8f9fa;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px 10px;
+  min-width: 20em;
+  height: 20em;
+  background-color: white;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.card:target {
+  background-color: blue;
+}
+
+.card img {
+  width: 100px;
+}
+.card h2 {
+  color: black;
+  text-align: center;
+}
+.card p {
+  width: 300px;
+  color: black;
+  text-align: center;
+}
+
+.item {
+  width: 200px;
+}
+
+.show {
+  display: flex;
+  align-items: center;
+  padding: 15px 25px;
+  border-radius: 40px;
+  cursor: pointer;
+}
+
+.show > img {
+  width: 30px;
+}
+
+.hide > div {
+  display: none;
+}
+
+.hide > img {
+  width: 30px;
+}
+
+.hide {
+  all: unset;
+  padding: 15px 18px;
+  border: 2px grey solid;
+  border-radius: 50%;
+}
+
+/* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */
+@media screen and (max-width: 500px) {
+  .header a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .header-right {
+    float: none;
+  }
 }
