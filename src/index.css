@@ -514,6 +514,10 @@ footer h4 {
     margin: 1em 0;
   }
 
+  .nav-links a {
+    font-size: 1.5em;
+  }
+
   .burger {
     position: fixed;
     right: 30px;
@@ -642,11 +646,11 @@ footer h4 {
 }
 
 .toggle .line1 {
-  transform: rotate(-45deg) translate(-5px, 6px);
+  transform: rotate(-45deg) translate(-5px, 4px);
 }
 .toggle .line2 {
   opacity: 0;
 }
 .toggle .line3 {
-  transform: rotate(45deg) translate(-5px, -6px);
+  transform: rotate(45deg) translate(-5px, -5px);
 }
