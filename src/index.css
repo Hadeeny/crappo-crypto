@@ -12,6 +12,44 @@ body {
   background: #0d0d2b;
 }
 
+/* Navigation */
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 8vh;
+  width: 99%;
+  margin: 0 auto;
+}
+
+.nav-links {
+  width: 40%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+}
+
+.nav-links li {
+  list-style: none;
+}
+
+.burger div {
+  width: 25px;
+  height: 2px;
+  background-color: white;
+  margin: 5px;
+  transition: all 0.4s ease;
+}
+
+.burger {
+  display: none;
+}
+/* ends */
 .hero {
   background-image: url("./Crypto\ images/hero-bg.png");
   padding: 30px;
@@ -454,6 +492,39 @@ footer h4 {
 }
 
 @media (max-width: 1000px) {
+  body {
+    overflow-x: hidden;
+  }
+  .nav-links {
+    position: fixed;
+    right: 0;
+    height: 100vh;
+    top: 0;
+    width: 100%;
+    background: #252540;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in;
+  }
+
+  .nav-links li {
+    margin: 1em 0;
+  }
+
+  .burger {
+    position: fixed;
+    right: 30px;
+    z-index: 200;
+    display: block;
+    cursor: pointer;
+  }
+
+  .nav-active {
+    transform: translateX(0);
+  }
   .section1 {
     display: flex;
     flex-direction: column;
@@ -568,4 +639,14 @@ footer h4 {
     width: 250px;
     margin: 0 auto;
   }
+}
+
+.toggle .line1 {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+.toggle .line2 {
+  opacity: 0;
+}
+.toggle .line3 {
+  transform: rotate(45deg) translate(-5px, -6px);
 }

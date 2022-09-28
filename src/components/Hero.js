@@ -14,31 +14,36 @@ const Hero = () => {
   return (
     <>
       <div className="hero">
-        <nav className="header">
-          <ul className="menu">
-            <li className="logo">
-              <img alt="logo" src={logo} />
-            </li>
-            <li className={toggle ? "item active" : "item"}>
+        <nav>
+          <div className="logo">
+            <img alt="logo" src={logo} />
+          </div>
+          <ul className={toggle ? "nav-links" : "nav-links  nav-active"}>
+            <li>
               <a href="#">Home</a>
             </li>
-            <li className={toggle ? "item active" : "item"}>
+            <li>
               <a href="#">About</a>
             </li>
-            <li className={toggle ? "item active" : "item"}>
+            <li>
               <a href="#">Services</a>
             </li>
 
-            <li className={toggle ? "item active" : "item button"}>
+            <li>
               <a href="#">Login</a>
             </li>
-            <li className={toggle ? "item active" : "item button secondary"}>
+            <li>
               <a href="#">Sign Up</a>
             </li>
-            <li onClick={toggleMenu} className=" toggle ">
-              <span className="bars"></span>
-            </li>
           </ul>
+          <div
+            onClick={toggleMenu}
+            className={toggle ? "burger" : "burger toggle"}
+          >
+            <div className="line1"></div>
+            <div className="line2"></div>
+            <div className="line3"></div>
+          </div>
         </nav>
         <div className="section1">
           <div className="sec-con">
