@@ -1,70 +1,130 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 :root {
   --blue: #3b82f6;
   --grey: #d1d5db;
 }
 
+body {
+  background: #0d0d2b;
+}
+
 .hero {
   background-image: url("./Crypto\ images/hero-bg.png");
   padding: 30px;
-  /* position: relative; */
 }
 
-/* Style the header links */
-.header a {
-  float: left;
+/* nav {
+  background: #222;
+  padding: 5px 20px;
+} */
+ul {
+  list-style-type: none;
+}
+a {
   color: white;
-  text-align: center;
-  margin: 0 12px;
   text-decoration: none;
-  font-size: 18px;
-  /* line-height: 25px; */
-  /* border-radius: 4px; */
+}
+a:hover {
+  text-decoration: underline;
+}
+.logo a:hover {
+  text-decoration: none;
+}
+.menu li {
+  font-size: 16px;
+  padding: 15px 5px;
+  white-space: nowrap;
+}
+.logo a,
+.toggle a {
+  font-size: 20px;
 }
 
-/* Style the logo link (notice that we set the same value of line-height and font-size to prevent the header to increase when the font gets bigger */
-.header a.logo {
-  font-size: 25px;
-  font-weight: bold;
+/* Mobile menu */
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
 }
-
-/* Change the background color on mouse-over */
-.header a:hover {
-  border-bottom: 2px solid var(--blue);
+.toggle {
+  order: 1;
 }
-
-/* Style the active/current link*/
-.header a.active {
-  background-color: var(--blue);
-  color: white;
+.item.button {
+  order: 2;
 }
-
-button {
-  background-color: var(--blue);
-  padding: 10px 20px;
-  color: white;
-  border: none;
-  border-radius: 20px;
-  font-size: 18px;
+.item {
+  width: 100%;
   text-align: center;
-  margin-top: -12px;
+  order: 3;
+  display: none;
+}
+.item.active {
+  display: block;
 }
 
-.login {
-  margin: 0 10px;
+/* Navbar Toggle */
+.toggle {
+  cursor: pointer;
 }
-
-/* Float the link section to the right */
-.header-right {
-  float: right;
+.bars {
+  background: #fff;
+  display: inline-block;
+  height: 2px;
+  position: relative;
+  transition: background 0.2s ease-out;
+  width: 18px;
 }
+.bars:before,
+.bars:after {
+  background: #fff;
+  content: "";
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all 0.2s ease-out;
+  width: 100%;
+}
+.bars:before {
+  top: 5px;
+}
+.bars:after {
+  top: -5px;
+}
+/* ends */
 
+.cal-btn {
+  background-color: var(--blue);
+  padding: 7px 20px;
+  border-radius: 20px;
+  color: white;
+  cursor: pointer;
+}
+.blue-btn {
+  color: white;
+  background: var(--blue);
+  padding: 5px 15px;
+  border-radius: 20px;
+  text-decoration: none;
+}
+.white-btn {
+  padding: 10px 20px;
+  color: black;
+  background-color: white;
+  border-radius: 15px;
+}
 .section1 {
   display: flex;
   align-items: center;
+}
+
+.hero-img {
+  min-width: 350px;
+  margin-right: 5em;
 }
 
 h1 {
@@ -76,7 +136,7 @@ p {
 
 .deal {
   position: relative;
-  width: 60%;
+  width: 360px;
   display: flex;
   justify-content: space-between;
   padding: 7px 2px;
@@ -96,7 +156,7 @@ p {
   cursor: pointer;
   position: relative;
   color: white;
-  width: 25%;
+  width: 180px;
   padding: 11px;
   border-radius: 20px;
   margin-top: 20px;
@@ -117,7 +177,7 @@ p {
   font-size: 48px;
 }
 
-span {
+.save {
   position: absolute;
   top: 3px;
   background-color: white;
@@ -163,35 +223,79 @@ h2 {
 }
 
 .why-con {
+  width: 450px;
   height: 15em;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  padding: 1em;
+}
+
+.why-us p {
+  margin: 2em 0;
 }
 .why-con h2 {
   font-size: 3em;
 }
 
-.why-con button {
-  margin-top: 1em;
-  width: 30%;
+.why-us img {
+  min-width: 300px;
 }
 
 .cal {
-  /* position: absolute; */
-  margin: 3em 0;
+  margin: 3em -2em;
   display: flex;
   justify-content: center;
 }
 
 .calculator {
   border-radius: 15px;
-  line-height: 3.7em;
-  padding: 3em;
+  padding: 4em 2em;
   background-color: white;
-  width: 80%;
+  width: 90%;
   position: absolute;
   top: -12em;
+}
+
+.cal-form {
+  display: flex;
+}
+
+.calculator h2,
+h3 {
+  margin: 1em 0;
+}
+
+.calculator input {
+  font-size: 18px;
+  width: 400px;
+  border: none;
+  margin-right: 2em;
+  border-bottom: 1px rgba(0, 0, 0, 0.1) solid;
+  background-color: transparent;
+}
+
+.calculator input::placeholder {
+  color: black;
+  font-weight: 100;
+}
+.calculator input:focus {
+  outline: none;
+  color: black;
+}
+
+.calculator select {
+  font-size: 18px;
+  width: 200px;
+  /* height: 2em; */
+  border: none;
+  border-bottom: rgba(0, 0, 0, 0.1) solid 1px;
+}
+
+.calculator select:focus-visible {
+  border: none;
+}
+
+form {
+  display: flex;
+  justify-content: space-between;
 }
 .trade {
   position: relative;
@@ -205,10 +309,9 @@ h2 {
 }
 
 .crypto-cards {
-  padding: 4em;
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap;
+  padding: 2%;
   background-color: #f8f9fa;
 }
 
@@ -219,14 +322,10 @@ h2 {
   align-items: center;
   padding: 50px 10px;
   min-width: 20em;
-  height: 20em;
+  height: 25em;
   background-color: white;
   border-radius: 10px;
   cursor: pointer;
-}
-
-.card:target {
-  background-color: blue;
 }
 
 .card img {
@@ -242,16 +341,42 @@ h2 {
   text-align: center;
 }
 
-.item {
-  width: 200px;
+.card-toggle {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px 10px;
+  min-width: 20em;
+  height: 25em;
+  background-color: #2b076e;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.card-toggle img {
+  width: 100px;
+}
+.card-toggle h2 {
+  color: white;
+  text-align: center;
+}
+.card-toggle p {
+  width: 300px;
+  color: white;
+  text-align: center;
 }
 
 .show {
   display: flex;
+  color: white;
+  font-size: 22px;
   align-items: center;
   padding: 15px 25px;
   border-radius: 40px;
   cursor: pointer;
+  background-color: var(--blue);
+  border: none;
 }
 
 .show > img {
@@ -273,14 +398,318 @@ h2 {
   border-radius: 50%;
 }
 
-/* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */
-@media screen and (max-width: 500px) {
-  .header a {
-    float: none;
-    display: block;
-    text-align: left;
+.feature {
+  padding: 40px;
+  background-image: url("./Crypto\ images/hero-bg.png");
+}
+
+.feature h2 {
+  text-align: center;
+  width: 100%;
+  padding-bottom: 4em;
+  font-size: 20px;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 100px;
+}
+
+.row p {
+  width: 90%;
+  font-size: 11px;
+  padding: 3em 0;
+}
+
+.first {
+  margin-top: -10em;
+}
+
+.row h3 {
+  color: white;
+}
+
+.img2 {
+  width: 600px;
+}
+
+.newsletter {
+  background-image: url("./Crypto\ images/newsletter-box.png");
+  background-repeat: no-repeat;
+  width: 95%;
+  margin: 0 auto;
+  display: flex;
+  padding: 4em 2em;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.newsletter h3 {
+  all: unset;
+  font-size: 1.5em;
+  color: white;
+}
+
+.newsletter p {
+  margin-top: 1em;
+}
+
+.newsletter input {
+  margin-right: 2em;
+  width: 300px;
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px white solid;
+}
+
+.newsletter input::placeholder {
+  color: white;
+  font-size: 1.3em;
+}
+
+footer {
+  padding: 4em;
+  background-image: url("./Crypto\ images/hero-bg.png");
+  color: white;
+}
+footer ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+footer ul li a:hover {
+  color: var(--blue);
+}
+
+footer ul li {
+  list-style: none;
+  padding: 10px 0;
+}
+
+footer h4 {
+  padding-bottom: 14px;
+}
+
+.main-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.main-footer img {
+  cursor: pointer;
+}
+
+.sub-footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 3em;
+}
+
+.payment {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 3em;
+}
+
+.payment img {
+  width: 5em;
+}
+
+.socials {
+  display: flex;
+  justify-content: space-between;
+  width: 15em;
+}
+.socials svg {
+  cursor: pointer;
+  height: 1.5em;
+  width: 1.5em;
+}
+
+.socials svg:hover {
+  fill: var(--blue);
+}
+
+/* Tablet menu */
+@media all and (min-width: 468px) {
+  .menu {
+    justify-content: center;
   }
-  .header-right {
-    float: none;
+
+  .logo {
+    flex: 1;
+  }
+
+  .item.button {
+    width: auto;
+    order: 1;
+    display: none;
+  }
+  .toggle {
+    order: 2;
+  }
+  .button.secondary {
+    border: 0;
+  }
+  .button a {
+    padding: 7.5px 15px;
+    border-radius: 50em;
+  }
+  .button.secondary a {
+    background: var(--blue);
+  }
+  .button a:hover {
+    text-decoration: none;
+  }
+}
+
+/* Desktop menu */
+@media all and (min-width: 768px) {
+  .item {
+    display: block;
+    width: auto;
+  }
+
+  .toggle {
+    display: none;
+  }
+
+  .logo {
+    order: 0;
+  }
+  .item {
+    order: 1;
+  }
+  .button {
+    order: 2;
+  }
+  .menu li {
+    padding: 15px 10px;
+  }
+  .menu li.button {
+    padding-right: 0;
+  }
+  .item.button {
+    display: block;
+  }
+}
+
+@media (max-width: 1000px) {
+  .section1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .stats {
+    flex-direction: column;
+    align-items: center;
+  }
+  .stat-item {
+    margin: 2em 0;
+  }
+  .stat-item h2 {
+    margin-top: 10px;
+  }
+  .stats img {
+    width: 3em;
+  }
+  .text-con {
+    padding-left: 20px;
+  }
+  .why-us {
+    flex-direction: column-reverse;
+  }
+  .why-us img {
+    margin-top: 2em;
+    width: 400px;
+  }
+
+  .hero-img {
+    width: 500px;
+  }
+  .cal-form {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .cal select {
+    margin: 2em 0;
+    width: 100%;
+  }
+
+  .crypto-cards {
+    flex-direction: column;
+  }
+  .card {
+    margin: 2em 0;
+  }
+  .row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .row img {
+    width: 80%;
+    margin-top: 3em;
+  }
+  .row:nth-child(3) {
+    flex-direction: column-reverse;
+  }
+  .first {
+    margin-top: -4em;
+  }
+
+  .newsletter {
+    display: block;
+    padding: 2em;
+    background-size: cover;
+  }
+  .newsletter form {
+    display: block;
+    width: 100%;
+    margin-top: 1em;
+  }
+
+  .footer-item {
+    margin-top: 3em;
+  }
+
+  .newsletter p {
+    font-size: 13px;
+    padding-top: 2em;
+  }
+
+  .newsletter input {
+    width: 100%;
+    margin-bottom: 2em;
+  }
+
+  .newsletter a {
+    border-radius: 25px;
+    text-decoration: none;
+  }
+
+  footer {
+    padding: unset;
+    margin-top: 3em;
+  }
+
+  .main-footer {
+    display: block;
+    width: 350px;
+    margin: auto;
+    text-align: center;
+  }
+  .sub-footer {
+    display: block;
+    width: 70%;
+    text-align: center;
+    margin: 3em auto;
+  }
+  .socials {
+    width: 250px;
+    margin: 0 auto;
   }
 }

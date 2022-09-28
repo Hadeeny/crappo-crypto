@@ -5,7 +5,7 @@ const WhyUs = () => {
   return (
     <>
       <div className="why-us">
-        <img alt="why us" src={why} />
+        <img alt="why-us" src={why} />
         <div className="why-con">
           <h2>Why you should choose CHAPPO</h2>
           <p>
@@ -13,13 +13,13 @@ const WhyUs = () => {
             laboriosam? Lorem ipsum dolor sit amet consectetur adipisicing elit.
             In, praesentium.
           </p>
-          <button>learn more</button>
+          <a className="blue-btn">learn more</a>
         </div>
       </div>
       <div
         style={{
           textAlign: "center",
-          lineHeight: "2.8em",
+          // lineHeight: "2.8em",
           marginTop: "3em",
           paddingBottom: "20em",
         }}

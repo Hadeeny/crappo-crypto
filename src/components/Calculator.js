@@ -6,9 +6,10 @@ const Calculator = () => {
   return (
     <div className="cal">
       <div className="calculator">
-        <form onSubmit={(e) => e.preventDefault()}>
+        <form className="cal-form" onSubmit={(e) => e.preventDefault()}>
           <input
             type="text"
+            placeholder="Enter your hashrate here"
             value={hashRate}
             onChange={(e) => setHashRate(e.target.value)}
           />
@@ -23,10 +24,12 @@ const Calculator = () => {
             <option value="mh/s">MH/s</option>
             <option value="gh/s">GH/s</option>
           </select>
-          <submit>Calculate</submit>
+          <div className="cal-btn" href="#" className="cal-btn">
+            Calculate
+          </div>
         </form>
-        <h2>ESTIMATE 24 HOUR REVENUE</h2>
-        <h2>0.055 130 59 ETH ($1275)</h2>
+        <h2 style={{ textAlign: "left" }}>ESTIMATE 24 HOUR REVENUE</h2>
+        <h2 style={{ textAlign: "left" }}>0.055 130 59 ETH ($1275)</h2>
         <h3>
           Revenue will change based on mining difficulty and Ethereum price.
         </h3>
