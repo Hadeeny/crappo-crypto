@@ -18,27 +18,31 @@ const Hero = () => {
           <div className="logo">
             <img alt="logo" src={logo} />
           </div>
-          {/* <ul className={toggle ? "nav-links" : "nav-links  nav-active"}> */}
-          <ul className={`nav-links ${!toggle && "nav-active"}`}>
-            <li>
-              <a href="#">Home</a>
-            </li>
-            <li>
-              <a href="#">About</a>
-            </li>
-            <li>
-              <a href="#">Services</a>
-            </li>
-            <li>
-              <a href="#">Contact</a>
-            </li>
-            <li>
-              <a href="#">Login</a>
-            </li>
-            <li>
-              <a href="#">Register</a>
-            </li>
-          </ul>
+          <div className={`nav-links ${!toggle && "nav-active"}`}>
+            <ul className="pri-links">
+              <li>
+                <a href="#">Home</a>
+              </li>
+              <li>
+                <a href="#">About</a>
+              </li>
+              <li>
+                <a href="#">Services</a>
+              </li>
+              <li>
+                <a href="#">Contact</a>
+              </li>
+            </ul>
+            <ul className="sec-links">
+              <li className="login">
+                <a href="#">Login</a>
+              </li>
+              <span className="v-bar"></span>
+              <li className="reg">
+                <a href="#">Register</a>
+              </li>
+            </ul>
+          </div>
 
           <div
             onClick={toggleMenu}
