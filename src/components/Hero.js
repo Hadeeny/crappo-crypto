@@ -18,7 +18,8 @@ const Hero = () => {
           <div className="logo">
             <img alt="logo" src={logo} />
           </div>
-          <ul className={toggle ? "nav-links" : "nav-links  nav-active"}>
+          {/* <ul className={toggle ? "nav-links" : "nav-links  nav-active"}> */}
+          <ul className={`nav-links ${!toggle && "nav-active"}`}>
             <li>
               <a href="#">Home</a>
             </li>
@@ -31,14 +32,14 @@ const Hero = () => {
             <li>
               <a href="#">Contact</a>
             </li>
-
             <li>
               <a href="#">Login</a>
             </li>
             <li>
-              <a href="#">Sign Up</a>
+              <a href="#">Register</a>
             </li>
           </ul>
+
           <div
             onClick={toggleMenu}
             className={toggle ? "burger" : "burger toggle"}

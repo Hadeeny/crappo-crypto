@@ -24,9 +24,14 @@ nav {
 }
 
 .nav-links {
-  width: 40%;
+  width: 45%;
   display: flex;
+  align-items: center;
   justify-content: space-between;
+}
+
+.link2 {
+  width: 150px;
 }
 
 .nav-links a {
@@ -49,6 +54,30 @@ nav {
 .burger {
   display: none;
 }
+.toggle .line1 {
+  transform: rotate(-45deg) translate(-5px, 4px);
+}
+.toggle .line2 {
+  opacity: 0;
+}
+.toggle .line3 {
+  transform: rotate(45deg) translate(-5px, -5px);
+}
+
+/* .login::after {
+  content: "";
+  background: rgba(255, 255, 255, 0.3);
+  width: 2px;
+  padding: 1px;
+  margin-left: 24px;
+} */
+
+.reg {
+  background: var(--blue);
+  padding: 8px 20px;
+  border-radius: 30px;
+}
+
 /* ends */
 .hero {
   background-image: url("./Crypto\ images/hero-bg.png");
@@ -643,14 +672,4 @@ footer h4 {
     width: 250px;
     margin: 0 auto;
   }
-}
-
-.toggle .line1 {
-  transform: rotate(-45deg) translate(-5px, 4px);
-}
-.toggle .line2 {
-  opacity: 0;
-}
-.toggle .line3 {
-  transform: rotate(45deg) translate(-5px, -5px);
 }
