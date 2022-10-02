@@ -13,19 +13,19 @@ const Footer = () => {
           <h4>Quick Links</h4>
           <ul>
             <li>
-              <a href="#">Home</a>
+              <a href="/">Home</a>
             </li>
             <li>
-              <a href="#">Product</a>
+              <a href="/">Product</a>
             </li>
             <li>
-              <a href="#">About</a>
+              <a href="/">About</a>
             </li>
             <li>
-              <a href="#">Features</a>
+              <a href="/">Features</a>
             </li>
             <li>
-              <a href="#">Contact</a>
+              <a href="/">Contact</a>
             </li>
           </ul>
         </div>
@@ -33,19 +33,19 @@ const Footer = () => {
           <h4>Resources Links</h4>
           <ul>
             <li>
-              <a href="#">Download White Paper</a>
+              <a href="/">Download White Paper</a>
             </li>
             <li>
-              <a href="#">Smart Token</a>
+              <a href="/">Smart Token</a>
             </li>
             <li>
-              <a href="#">Blockchain Explore</a>
+              <a href="/">Blockchain Explore</a>
             </li>
             <li>
-              <a href="#">Crypto API</a>
+              <a href="/">Crypto API</a>
             </li>
             <li>
-              <a href="#">Interest</a>
+              <a href="/">Interest</a>
             </li>
           </ul>
         </div>
@@ -64,7 +64,7 @@ const Footer = () => {
           <svg
             stroke="currentColor"
             fill="currentColor"
-            stroke-width="0"
+            strokeWidth="0"
             viewBox="0 0 512 512"
             height="1em"
             width="1em"
@@ -75,7 +75,7 @@ const Footer = () => {
           <svg
             stroke="currentColor"
             fill="currentColor"
-            stroke-width="0"
+            strokeWidth="0"
             viewBox="0 0 512 512"
             height="1em"
             width="1em"
@@ -86,7 +86,7 @@ const Footer = () => {
           <svg
             stroke="currentColor"
             fill="currentColor"
-            stroke-width="0"
+            strokeWidth="0"
             viewBox="0 0 512 512"
             height="1em"
             width="1em"
@@ -98,7 +98,7 @@ const Footer = () => {
           <svg
             stroke="currentColor"
             fill="currentColor"
-            stroke-width="0"
+            strokeWidth="0"
             viewBox="0 0 512 512"
             height="1em"
             width="1em"
@@ -109,7 +109,7 @@ const Footer = () => {
           <svg
             stroke="currentColor"
             fill="currentColor"
-            stroke-width="0"
+            strokeWidth="0"
             viewBox="0 0 512 512"
             height="1em"
             width="1em"

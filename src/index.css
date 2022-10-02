@@ -121,7 +121,8 @@ nav {
 }
 
 .hero-img {
-  min-width: 350px;
+  /* min-width: 350px; */
+  width: 40%;
   margin-right: 5em;
 }
 

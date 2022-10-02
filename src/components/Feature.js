@@ -17,7 +17,7 @@ const Feature = () => {
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur
             rem ducimus vitae maiores dolorum alias.
           </p>
-          <a href="#" className="blue-btn">
+          <a href="/" className="blue-btn">
             learn more
           </a>
         </div>
@@ -31,7 +31,7 @@ const Feature = () => {
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur
             rem ducimus vitae maiores dolorum alias.
           </p>
-          <a href="#" className="blue-btn">
+          <a href="/" className="blue-btn">
             learn more
           </a>
         </div>
@@ -43,7 +43,7 @@ const Feature = () => {
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur
             rem ducimus vitae maiores dolorum alias.
           </p>
-          <a href="#" className="blue-btn">
+          <a href="/" className="blue-btn">
             learn more
           </a>
         </div>

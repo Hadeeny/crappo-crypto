@@ -24,7 +24,7 @@ const Calculator = () => {
             <option value="mh/s">MH/s</option>
             <option value="gh/s">GH/s</option>
           </select>
-          <div className="cal-btn" href="#" className="cal-btn">
+          <div href="/" className="cal-btn">
             Calculate
           </div>
         </form>

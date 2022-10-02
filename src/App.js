@@ -4,7 +4,6 @@ import Hero from "./components/Hero";
 import Trade from "./components/Trade";
 import Feature from "./components/Feature";
 import Footer from "./components/Footer";
-import WhyUs from "./components/WhyUs";
 import Newsletter from "./components/Newsletter";
 
 function App() {

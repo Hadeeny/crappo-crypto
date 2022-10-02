@@ -11,7 +11,7 @@ const Newsletter = () => {
       </div>
       <form>
         <input placeholder="enter message" />
-        <a href="#" className="white-btn">
+        <a href="/" className="white-btn">
           Subscribe
         </a>
       </form>
