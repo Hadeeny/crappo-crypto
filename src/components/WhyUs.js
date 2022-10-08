@@ -5,60 +5,78 @@ import { ScrollTrigger } from "gsap/all";
 
 gsap.registerPlugin(ScrollTrigger);
 const WhyUs = () => {
-  const blue = useRef();
-  const img = useRef();
-
-  // useEffect(() => {
-  //   gsap.to("#whyus", {
-  //     x: 200,
-  //     ease: Power3.easeOut,
-  //     scrollTrigger: {
-  //       trigger: "#whyus",
-  //       start: "top center",
-  //       end: "top 100px",
-  //       scrub: false,
-  //       toggleActions: "restart none none none",
-  //       // markers: true,
-  //       // id: "scrub",d
-  //     },
-  //   });
-  // });
+  const ref = useRef();
 
   useEffect(() => {
-    const anim = gsap.fromTo(
-      "#whyus",
-      { y: 100, ease: Power3.easeOut, duration: 2, opacity: 0 },
-      { y: 0, ease: Power3.easeOut, delay: 0.3, duration: 2, opacity: 1 }
-    );
-
-    const hero = gsap.fromTo(
-      ["#img"],
-      { scale: 0.4, ease: Power3.easeOut, opacity: 0, duration: 2 },
+    const el = ref.current;
+    gsap.fromTo(
+      el.querySelector("#img"),
+      { scale: 0.3, opacity: 0, duration: 3 },
       {
         scale: 1,
-        ease: Power3.easeOut,
         opacity: 1,
-        delay: 0.3,
-        duration: 2,
+        duration: 3,
+        ease: Power3.easeOut,
+        scrollTrigger: {
+          trigger: el.querySelector("#img"),
+          start: "top center",
+          end: "bottom top",
+          scrub: false,
+          toggleActions: "play play reverse none",
+          markers: false,
+        },
       }
     );
+  });
 
-    ScrollTrigger.create({
-      trigger: "#whyus",
-      scrub: false,
-      toggleActions: "restart none reverse pause",
-      start: "top 350px",
-      end: "top 100px",
-      markers: true,
-      animation: anim,
-    });
+  useEffect(() => {
+    const el = ref.current;
+    gsap.fromTo(
+      el.querySelector(".why-con"),
+      { y: 100, opacity: 0 },
+      {
+        y: 0,
+        opacity: 1,
+        duration: 3,
+        ease: Power3.easeOut,
+        scrollTrigger: {
+          trigger: el.querySelector(".why-con"),
+          start: "top center",
+          end: "bottom top",
+          scrub: false,
+          toggleActions: "play play reverse none",
+        },
+      }
+    );
+  });
+
+  useEffect(() => {
+    const el = ref.current;
+    gsap.fromTo(
+      el.querySelector("#earn"),
+      { y: 200, opacity: 0, duration: 3 },
+      {
+        y: 0,
+        opacity: 1,
+        duration: 3,
+        ease: Power3.easeOut,
+        scrollTrigger: {
+          trigger: el.querySelector("#earn"),
+          start: "top center",
+          end: "bottom top",
+          scrub: false,
+          toggleActions: "play play reverse none",
+          markers: false,
+        },
+      }
+    );
   });
 
   return (
     <>
-      <div className="why-us">
-        <img ref={img} id="img" alt="why-us" src={why} />
-        <div id="whyus" ref={blue} className="why-con">
+      <div ref={ref} className="why-us">
+        <img id="img" alt="why-us" src={why} />
+        <div className="why-con">
           <h2>Why you should choose CHAPPO</h2>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero,
@@ -71,9 +89,9 @@ const WhyUs = () => {
         </div>
       </div>
       <div
+        id="earn"
         style={{
           textAlign: "center",
-          // lineHeight: "2.8em",
           marginTop: "3em",
           paddingBottom: "20em",
         }}

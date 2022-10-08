@@ -1,10 +1,38 @@
-import React, { useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
+import { gsap, Power3 } from "gsap";
+import { ScrollTrigger } from "gsap/all";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const Calculator = () => {
   const [hashRate, setHashRate] = useState("");
   const [unit, setUnit] = useState("");
+  const ref = useRef();
+
+  useEffect(() => {
+    const el = ref.current;
+    gsap.fromTo(
+      el.querySelector(".calculator"),
+      { scale: 0.3, opacity: 0, duration: 3 },
+      {
+        scale: 1,
+        opacity: 1,
+        duration: 3,
+        ease: Power3.easeOut,
+        scrollTrigger: {
+          trigger: el.querySelector(".calculator"),
+          start: "top center",
+          end: "bottom top",
+          scrub: false,
+          toggleActions: "play play reverse none",
+          markers: false,
+        },
+      }
+    );
+  });
+
   return (
-    <div className="cal">
+    <div className="cal" ref={ref}>
       <div className="calculator">
         <form className="cal-form" onSubmit={(e) => e.preventDefault()}>
           <input
